@@ -37,30 +37,30 @@ df = pd.DataFrame({'Employee_ID': employee_id, 'Phone_Number': phonenum, 'Email'
 
 # Display the DataFrame
 print(df)
-
-# MySQL database connection parameters
-db_user = 'root'
-db_password = 'root'
-db_host = 'localhost'
-db_port = '3306'
-db_name = 'vidya_1'
-
-# Create a SQLAlchemy engine
-engine = create_engine(f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}")
-
-# Insert the DataFrame into a MySQL table called 'your_table_name'
-table_name = 'employeetable'
-df.to_sql(table_name, con=engine, if_exists='replace', index=False)
-
-# read the data from the db
-query = f'select * from {table_name}'
-df_from_db=pd.read_sql(query,con=engine)
-
-print("dataframe from mysql")
-print(df_from_db)
-
-
-# Close the database connection
+#
+# # MySQL database connection parameters
+# db_user = 'root'
+# db_password = 'root'
+# db_host = 'localhost'
+# db_port = '3306'
+# db_name = 'vidya_1'
+#
+# # Create a SQLAlchemy engine
+# engine = create_engine(f"mysql+pymysql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}")
+#
+# # Insert the DataFrame into a MySQL table called 'your_table_name'
+# table_name = 'employeetable'
+# df.to_sql(table_name, con=engine, if_exists='replace', index=False)
+#
+# # read the data from the db
+# query = f'select * from {table_name}'
+# df_from_db=pd.read_sql(query,con=engine)
+#
+# print("dataframe from mysql")
+# print(df_from_db)
+#
+#
+# # Close the database connection
 # engine.dispose()
 
 

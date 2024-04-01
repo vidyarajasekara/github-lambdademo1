@@ -36,10 +36,10 @@
 #     print(f'{i} occurance is :',{a.count(i)})
 
 
-# v="shivysenthamaraikannan"
-# for i in v:
-#     print(f'{i} occurance is:',{v.count(i)})
-#
+v="shivysenthamaraikannan"
+for i in v:
+    print(f'{i} occurance is:',{v.count(i)})
+
 
 # # doubt:not working list allow duplicates
 # a = "vidyarajasekaran"

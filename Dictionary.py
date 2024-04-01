@@ -53,6 +53,13 @@
 # poc
 
 
+str="vidya"
+a={}
+for x in str:
+    a.update({x:str.count(x)})
+print(a)
+
+
 
 
 
